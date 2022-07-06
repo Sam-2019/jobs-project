@@ -14,5 +14,5 @@ export default function Jobs() {
     return <p>Error</p>;
   }
 
-  return <JobList dataSource={data} />;
+  return <JobList dataSource={data.jobs} />;
 }
