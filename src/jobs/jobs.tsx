@@ -1,5 +1,5 @@
 import { Grid } from "@nextui-org/react";
-import { Pagination } from "@nextui-org/react";
+import { Pagination, Container } from "@nextui-org/react";
 import { CardItem } from "../components/card";
 import Types from "./types";
 
@@ -15,9 +15,9 @@ export default function JobList({ dataSource }: any) {
           </Grid>
         ))}
       </Grid.Container>
-      <div>
+      <Grid.Container justify="center">
         <Pagination total={10} initialPage={1} />
-      </div>
+      </Grid.Container>
     </div>
   );
 }
