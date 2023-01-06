@@ -26,3 +26,4 @@ src/utils/jobs
 .env
 src/components/card.tsx
 src/components/card(original).tsx
+src/utils/data.tsx
