@@ -1,21 +1,25 @@
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 
-export const CardItem = (item: any) => {
+export const CardItem = ({ data }: any) => {
+  function routeAction(data: any) {
+    window.open(data, "_blank");
+  }
+
   return (
     <Card css={{ w: "100%", h: "400px" }}>
       <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
         <Col>
-          <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
-            New
+          <Text size={12} transform="uppercase" color="gray">
+            {data.title}
           </Text>
           <Text h3 color="black">
-            Acme camera
+            {data.description}
           </Text>
         </Col>
       </Card.Header>
       <Card.Body css={{ p: 0 }}>
         <Card.Image
-          src="https://nextui.org/images/card-example-6.jpeg"
+          src={data.imgURL}
           width="100%"
           height="100%"
           objectFit="cover"
@@ -43,7 +47,13 @@ export const CardItem = (item: any) => {
         </Col> */}
           <Col>
             <Row justify="flex-end">
-              <Button flat auto rounded color="secondary">
+              <Button
+                flat
+                auto
+                rounded
+                color="secondary"
+                onClick={() => routeAction(data.url)}
+              >
                 <Text
                   css={{ color: "inherit" }}
                   size={12}
