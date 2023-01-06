@@ -1,6 +1,6 @@
 import { Grid } from "@nextui-org/react";
 import { Pagination } from "@nextui-org/react";
-import { CardItem } from "../components/card copy";
+import { CardItem } from "../components/card";
 import Types from "./types";
 
 export default function JobList({ dataSource }: any) {
