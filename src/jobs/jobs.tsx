@@ -1,5 +1,4 @@
-import { Grid } from "@nextui-org/react";
-import { Pagination, Container } from "@nextui-org/react";
+import { Grid, Pagination } from "@nextui-org/react";
 import { CardItem } from "../components/card";
 import Types from "./types";
 
@@ -10,7 +9,7 @@ export default function JobList({ dataSource }: any) {
         <Types />
 
         {dataSource.map((item: any) => (
-          <Grid xs={12} sm={4} key={item.id}>
+          <Grid xs={12} sm={3} key={item.id}>
             <CardItem description={item.description} data={item} />
           </Grid>
         ))}
