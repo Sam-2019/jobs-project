@@ -18,7 +18,7 @@ export default function JobTypes() {
  return (
   <Grid.Container gap={2} justify="center">
    {colors.map((item: any) => (
-    <Grid key={item.key}>
+    <Grid key={item.id}>
      <Button
       auto
       color={item.colour}
