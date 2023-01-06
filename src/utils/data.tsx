@@ -58,37 +58,37 @@ export const userData = [
 export const colors = [
   {
     id: 1,
-    description: "John Brown",
+    name: "John Brown",
     colour: "primary",
     flat: true,
   },
   {
     id: 2,
-    description: "Jim Green",
+    name: "Jim Green",
     colour: "secondary",
     flat: true,
   },
   {
     id: 3,
-    description: "Joe Black",
+    name: "Joe Black",
     colour: "success",
     flat: true,
   },
   {
     id: 4,
-    description: "Kwame Opam",
+    name: "Kwame Opam",
     colour: "warning",
     flat: true,
   },
   {
     id: 5,
-    description: "Julius Come",
+    name: "Julius Come",
     colour: "error",
     flat: true,
   },
   {
     id: 6,
-    description: "Winnie Pooh",
+    name: "Winnie Pooh",
     colour: "gradient",
     flat: true,
   },
