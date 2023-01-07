@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Grid } from "@nextui-org/react";
-import { colors } from "../../../utils/data";
+import { colors } from "../../utils/data";
 
 export default function JobTypes() {
   const [active, setActive] = React.useState("John Brown");
