@@ -1,6 +1,6 @@
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 
-export const CardItem = ({ data }: any) => {
+export const CardItem = ({ data, view }: any) => {
   function routeAction(data: any) {
     window.open(data, "_blank");
   }
@@ -60,7 +60,7 @@ export const CardItem = ({ data }: any) => {
                   weight="bold"
                   transform="uppercase"
                 >
-                  Apply Now
+                  {view ? "View" : " Apply Now"}
                 </Text>
               </Button>
             </Row>
