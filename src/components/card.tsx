@@ -9,10 +9,10 @@ export const CardItem = ({ data, view }: any) => {
     <Card css={{ w: "100%", h: "400px" }}>
       <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
         <Col>
-          <Text size={12} transform="uppercase" color="gray">
+          <Text size={10} transform="uppercase" color="gray">
             {data.title}
           </Text>
-          <Text h3 color="black">
+          <Text h4 color="black">
             {data.description}
           </Text>
         </Col>
