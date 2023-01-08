@@ -1,31 +1,35 @@
-import { Navbar, Link, Text, Avatar, Dropdown } from "@nextui-org/react";
+import { Navbar, Link, Text } from "@nextui-org/react";
+import { useLocation } from "react-router-dom";
 import { AcmeLogo } from "./acmeLogo";
 
 export default function Navigation() {
   const collapseItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+   {id: 1, name: "Twitter", path: "/twitter"},
+   {id: 2, name: "Jobs", path: "/jobs"},
+   {id: 3, name: "News", path: "/news"},
+   {id: 4, name: "Art", path: "/art"},
+   {id: 5, name: "Movies", path: "/movies"}
   ];
 
+  let { pathname } = useLocation();
+
+  const setActive = (path: any) => {
+    return pathname === path ? true : false;
+  };
+
   return (
-    <Navbar  variant="floating">
+    <Navbar variant="floating">
       <Navbar.Toggle showIn="xs" />
-      <Navbar.Brand
-        css={{
-          "@xs": {
-            w: "12%",
-          },
-        }}
-      >
-        <AcmeLogo />
+      <Navbar.Brand css={{"@xs": { w: "12%" } }}>
+        <Link
+              color="inherit"
+              css={{
+                minWidth: "100%",
+              }}
+              href= "/"
+            >
+              <AcmeLogo />
+            </Link>
         <Text b color="inherit" hideIn="xs">
           ACME
         </Text>
@@ -36,12 +40,11 @@ export default function Navigation() {
         hideIn="xs"
         variant="highlight-rounded"
       >
-        <Navbar.Link href="#">Twitter</Navbar.Link>
-        <Navbar.Link isActive href="#">
-          Business
-        </Navbar.Link>
-        <Navbar.Link href="#">News</Navbar.Link>
-        <Navbar.Link href="#">Art</Navbar.Link>
+        <Navbar.Link isActive={setActive("/twitter")} href="/twitter">Twitter</Navbar.Link>
+        <Navbar.Link isActive={setActive("/jobs")} href="jobs">Jobs</Navbar.Link>
+        <Navbar.Link isActive={setActive("/news")} href="/news">News</Navbar.Link>
+        <Navbar.Link isActive={setActive("/art")} href="/art">Art</Navbar.Link>
+        <Navbar.Link isActive={setActive("/movies")} href="/movies">Movies</Navbar.Link>
       </Navbar.Content>
       <Navbar.Content
         css={{
@@ -51,67 +54,22 @@ export default function Navigation() {
           },
         }}
       >
-        <Dropdown placement="bottom-right">
-          <Navbar.Item>
-            <Dropdown.Trigger>
-              <Avatar
-                bordered
-                as="button"
-                color="secondary"
-                size="md"
-                src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-              />
-            </Dropdown.Trigger>
-          </Navbar.Item>
-          <Dropdown.Menu
-            aria-label="User menu actions"
-            color="secondary"
-            onAction={(actionKey) => console.log({ actionKey })}
-          >
-            <Dropdown.Item key="profile" css={{ height: "$18" }}>
-              <Text b color="inherit" css={{ d: "flex" }}>
-                Signed in as
-              </Text>
-              <Text b color="inherit" css={{ d: "flex" }}>
-                zoey@example.com
-              </Text>
-            </Dropdown.Item>
-            <Dropdown.Item key="settings" withDivider>
-              My Settings
-            </Dropdown.Item>
-            <Dropdown.Item key="team_settings">Team Settings</Dropdown.Item>
-            <Dropdown.Item key="analytics" withDivider>
-              Analytics
-            </Dropdown.Item>
-            <Dropdown.Item key="system">System</Dropdown.Item>
-            <Dropdown.Item key="configurations">Configurations</Dropdown.Item>
-            <Dropdown.Item key="help_and_feedback" withDivider>
-              Help & Feedback
-            </Dropdown.Item>
-            <Dropdown.Item key="logout" withDivider color="error">
-              Log Out
-            </Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
       </Navbar.Content>
       <Navbar.Collapse>
-        {collapseItems.map((item, index) => (
+        {collapseItems.map((item) => (
           <Navbar.CollapseItem
-            key={item}
+            key={item.id}
             activeColor="secondary"
-            css={{
-              color: index === collapseItems.length - 1 ? "$error" : "",
-            }}
-            isActive={index === 2}
+            isActive={setActive(item.path)}
           >
             <Link
               color="inherit"
               css={{
                 minWidth: "100%",
               }}
-              href="#"
+              href= {item.path}
             >
-              {item}
+              {item.name}
             </Link>
           </Navbar.CollapseItem>
         ))}
