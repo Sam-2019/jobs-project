@@ -28,7 +28,7 @@ export const userData = [
   },
   {
     id: 4,
-    description: "John Brown",
+    description: "Josh Kirby",
     age: 32,
     address: "New York No. 1 Lake Park",
     tags: ["nice", "developer"],
@@ -37,7 +37,7 @@ export const userData = [
   },
   {
     id: 5,
-    description: "Jim Green",
+    description: "Jack Waymo",
     age: 42,
     address: "London No. 1 Lake Park",
     tags: ["loser"],
@@ -46,7 +46,25 @@ export const userData = [
   },
   {
     id: 6,
-    description: "Joe Black",
+    description: "Jid Quick",
+    age: 32,
+    address: "Sidney No. 1 Lake Park",
+    tags: ["cool", "teacher"],
+    imgURL:
+      "https://pbs.twimg.com/profile_images/1231236382808563713/Q88JDBjw_400x400.jpg",
+  },
+  {
+    id: 7,
+    description: "Jean Lee",
+    age: 42,
+    address: "London No. 1 Lake Park",
+    tags: ["loser"],
+    imgURL:
+      "https://pbs.twimg.com/profile_images/1231236382808563713/Q88JDBjw_400x400.jpg",
+  },
+  {
+    id: 8,
+    description: "Jah Pink",
     age: 32,
     address: "Sidney No. 1 Lake Park",
     tags: ["cool", "teacher"],
