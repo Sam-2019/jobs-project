@@ -34,11 +34,11 @@ export default function Navigation() {
         hideIn="xs"
         variant="highlight-rounded"
       >
-        <Navbar.Link isActive={setActive("/twitter")} href="/twitter">Twitter</Navbar.Link>
-        <Navbar.Link isActive={setActive("/jobs")} href="jobs">Jobs</Navbar.Link>
         <Navbar.Link isActive={setActive("/news")} href="/news">News</Navbar.Link>
         <Navbar.Link isActive={setActive("/art")} href="/art">Art</Navbar.Link>
         <Navbar.Link isActive={setActive("/movies")} href="/movies">Movies</Navbar.Link>
+        <Navbar.Link isActive={setActive("/twitter")} href="/twitter">Twitter</Navbar.Link>
+        <Navbar.Link isActive={setActive("/jobs")} href="jobs">Jobs</Navbar.Link>
       </Navbar.Content>
       <Navbar.Content
         css={{
