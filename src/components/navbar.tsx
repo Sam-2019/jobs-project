@@ -1,16 +1,9 @@
 import { Navbar, Link, Text } from "@nextui-org/react";
 import { useLocation } from "react-router-dom";
 import { AcmeLogo } from "./acmeLogo";
+import { collapseItems } from "../utils/data";
 
 export default function Navigation() {
-  const collapseItems = [
-   {id: 1, name: "Twitter", path: "/twitter"},
-   {id: 2, name: "Jobs", path: "/jobs"},
-   {id: 3, name: "News", path: "/news"},
-   {id: 4, name: "Art", path: "/art"},
-   {id: 5, name: "Movies", path: "/movies"}
-  ];
-
   let { pathname } = useLocation();
 
   const setActive = (path: any) => {
@@ -20,9 +13,9 @@ export default function Navigation() {
   return (
     <Navbar variant="floating">
       <Navbar.Toggle showIn="xs" />
-      <Navbar.Brand css={{"@xs": { w: "12%" } }}>
-        <Link color="inherit" href= "/">
-              <AcmeLogo />
+      <Navbar.Brand css={{ "@xs": { w: "12%" } }}>
+        <Link color="inherit" href="/">
+          <AcmeLogo />
         </Link>
         <Text b color="inherit" hideIn="xs">
           ACME
@@ -34,11 +27,36 @@ export default function Navigation() {
         hideIn="xs"
         variant="highlight-rounded"
       >
-        <Navbar.Link isActive={setActive("/news")} href="/news">News</Navbar.Link>
-        <Navbar.Link isActive={setActive("/art")} href="/art">Art</Navbar.Link>
-        <Navbar.Link isActive={setActive("/movies")} href="/movies">Movies</Navbar.Link>
-        <Navbar.Link isActive={setActive("/twitter")} href="/twitter">Twitter</Navbar.Link>
-        <Navbar.Link isActive={setActive("/jobs")} href="jobs">Jobs</Navbar.Link>
+        <Navbar.Link
+          isActive={setActive(collapseItems[0].path)}
+          href={collapseItems[0].path}
+        >
+          {collapseItems[0].name}
+        </Navbar.Link>
+        <Navbar.Link
+          isActive={setActive(collapseItems[1].path)}
+          href={collapseItems[1].path}
+        >
+          {collapseItems[1].name}
+        </Navbar.Link>
+        <Navbar.Link
+          isActive={setActive(collapseItems[2].path)}
+          href={collapseItems[2].path}
+        >
+          {collapseItems[2].name}
+        </Navbar.Link>
+        <Navbar.Link
+          isActive={setActive(collapseItems[3].path)}
+          href={collapseItems[3].path}
+        >
+          {collapseItems[3].name}
+        </Navbar.Link>
+        <Navbar.Link
+          isActive={setActive(collapseItems[4].path)}
+          href={collapseItems[4].path}
+        >
+          {collapseItems[4].name}
+        </Navbar.Link>
       </Navbar.Content>
       <Navbar.Content
         css={{
@@ -47,8 +65,7 @@ export default function Navigation() {
             jc: "flex-end",
           },
         }}
-      >
-      </Navbar.Content>
+      ></Navbar.Content>
       <Navbar.Collapse>
         {collapseItems.map((item) => (
           <Navbar.CollapseItem
@@ -61,7 +78,7 @@ export default function Navigation() {
               css={{
                 minWidth: "100%",
               }}
-              href= {item.path}
+              href={item.path}
             >
               {item.name}
             </Link>

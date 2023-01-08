@@ -111,3 +111,11 @@ export const colors = [
     flat: true,
   },
 ];
+
+export const collapseItems = [
+  { id: 0, name: "news", path: "/news" },
+  { id: 1, name: "art", path: "/art" },
+  { id: 2, name: "movies", path: "/movies" },
+  { id: 3, name: "twitter", path: "/twitter" },
+  { id: 4, name: "jobs", path: "/jobs" },
+];
