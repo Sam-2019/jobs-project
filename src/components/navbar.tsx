@@ -21,15 +21,9 @@ export default function Navigation() {
     <Navbar variant="floating">
       <Navbar.Toggle showIn="xs" />
       <Navbar.Brand css={{"@xs": { w: "12%" } }}>
-        <Link
-              color="inherit"
-              css={{
-                minWidth: "100%",
-              }}
-              href= "/"
-            >
+        <Link color="inherit" href= "/">
               <AcmeLogo />
-            </Link>
+        </Link>
         <Text b color="inherit" hideIn="xs">
           ACME
         </Text>

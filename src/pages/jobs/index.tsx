@@ -5,7 +5,7 @@ export default function Jobs(data: any) {
   console.log("jobs");
   return (
     <Container>
-      <List dataSource={data} />
+      <List dataSource={data} view={false} />
     </Container>
   );
 }
