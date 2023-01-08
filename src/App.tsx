@@ -40,7 +40,7 @@ const theme = createTheme({
   },
 });
 
-export default function Index() {
+export default function App() {
   return (
     <NextUIProvider theme={theme}>
       <Layout>
