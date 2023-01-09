@@ -120,3 +120,5 @@ export const collapseItems = [
   { id: 4, name: "twitter", path: "/twitter" },
   { id: 5, name: "jobs", path: "/jobs" },
 ];
+
+export const updatedcollapseItems = collapseItems.slice(1)
