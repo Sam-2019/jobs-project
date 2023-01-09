@@ -113,9 +113,10 @@ export const colors = [
 ];
 
 export const collapseItems = [
-  { id: 0, name: "news", path: "/news" },
-  { id: 1, name: "art", path: "/art" },
-  { id: 2, name: "movies", path: "/movies" },
-  { id: 3, name: "twitter", path: "/twitter" },
-  { id: 4, name: "jobs", path: "/jobs" },
+  { id: 0, name: "home", path: "/" },
+  { id: 1, name: "news", path: "/news" },
+  { id: 2, name: "art", path: "/art" },
+  { id: 3, name: "movies", path: "/movies" },
+  { id: 4, name: "twitter", path: "/twitter" },
+  { id: 5, name: "jobs", path: "/jobs" },
 ];
