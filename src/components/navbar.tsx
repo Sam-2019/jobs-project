@@ -1,9 +1,7 @@
 import { Navbar, Link, Text } from "@nextui-org/react";
 import { useLocation } from "react-router-dom";
 import { AcmeLogo } from "./acmeLogo";
-import { collapseItems } from "../utils/data";
-
-collapseItems.shift();
+import { updatedcollapseItems } from "../utils/data";
 
 export default function Navigation() {
   let { pathname } = useLocation();
@@ -29,7 +27,7 @@ export default function Navigation() {
         hideIn="xs"
         variant="highlight-rounded"
       >
-        {collapseItems.map((item) => (
+        {updatedcollapseItems.map((item) => (
           <Navbar.Link
             key={item.id}
             isActive={setActive(item.path)}
@@ -48,7 +46,7 @@ export default function Navigation() {
         }}
       ></Navbar.Content>
       <Navbar.Collapse>
-        {collapseItems.map((item) => (
+        {updatedcollapseItems.map((item) => (
           <Navbar.CollapseItem
             key={item.id}
             activeColor="secondary"
