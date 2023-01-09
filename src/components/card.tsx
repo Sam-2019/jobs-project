@@ -52,7 +52,7 @@ export const CardItem = ({ data, view }: any) => {
                 auto
                 rounded
                 color="secondary"
-                onClick={() => routeAction(data.url)}
+                onPress={() => routeAction(data.url)}
               >
                 <Text
                   css={{ color: "inherit" }}
