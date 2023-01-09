@@ -9,41 +9,40 @@ import Movies, { loader as moviesLoader } from "../routes/movies";
 import Twitter, { loader as twitterLoader } from "../routes/twitter";
 import { collapseItems } from "./data";
 
-console.log(collapseItems[0].path);
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: collapseItems[0].path,
     element: <Root />,
     errorElement: <ErrorPage />,
     loader: rootLoader,
     children: [
       {
-        path: "/",
+        path: collapseItems[0].path,
         element: <Home />,
         loader: homeLoader,
       },
       {
-        path: collapseItems[0].path,
+        path: collapseItems[1].path,
         element: <News />,
         loader: newsLoader,
       },
       {
-        path: collapseItems[1].path,
+        path: collapseItems[2].path,
         element: <Art />,
         loader: artLoader,
       },
       {
-        path: collapseItems[2].path,
+        path: collapseItems[3].path,
         element: <Movies />,
         loader: moviesLoader,
       },
       {
-        path: collapseItems[3].path,
+        path: collapseItems[4].path,
         element: <Twitter />,
         loader: twitterLoader,
       },
       {
-        path: collapseItems[4].path,
+        path: collapseItems[5].path,
         element: <Jobs />,
         loader: jobsLoader,
       },
