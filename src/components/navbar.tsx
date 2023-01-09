@@ -16,10 +16,10 @@ export default function Navigation() {
       <Navbar.Brand css={{ "@xs": { w: "12%" } }}>
         <Link color="inherit" href="/">
           <AcmeLogo />
+          <Text b color="inherit" hideIn="xs">
+            ACME
+          </Text>
         </Link>
-        <Text b color="inherit" hideIn="xs">
-          ACME
-        </Text>
       </Navbar.Brand>
       <Navbar.Content
         enableCursorHighlight
